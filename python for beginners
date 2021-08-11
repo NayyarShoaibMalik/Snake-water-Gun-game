@@ -1,0 +1,43 @@
+'''
+
+      Snake   Water   Game
+
+snake will drink water, snake wins
+snake will die by gun , Gun wins
+gun will sink in water, water wins
+
+'''
+
+# use reandom library for random numbers which computer will use
+import random
+# function for who wins
+
+def game_win(cmp,ply):
+    if cmp == 'S' and ply =='W':
+        print("Computers wins")
+    elif cmp == 'S' and ply == 'G':
+        print("Players wins")
+    elif cmp == 'W' and ply =='S':
+        print("players wins")
+    elif cmp == 'W' and ply =='G':
+        print("Computers wins")
+    elif cmp == 'G' and ply =='S':
+        print("Computers wins")
+    elif cmp == 'G' and ply =='W':
+        print("players wins")
+    else:
+        print("Game Draw")
+
+print("Computer Turn :  Snake(S)   Water(W)   Gun(G)")
+rand= random.randint(1,3)
+
+if rand == 1:
+    cmp = 'S'
+elif rand == 2:
+    cmp = 'W'
+else:
+    cmp = 'G'
+
+ply = input("Your Turn :  Snake(S)   Water(W)   Gun(G)")
+game_win(cmp,ply)
+print("Computrt used : " , cmp)
